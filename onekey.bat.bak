@@ -3,7 +3,6 @@ REM 此脚本可以一键启动服务器\客户端\流媒体
 REM 下面分别填入程序的路径
 set bin_path="e:\SVN_XIANAN\XAzysx_BHF3.0\trunk_207\Code(v4.1)\bin"
 set media_path="e:\软件\iVMS-4200 Stream Media Server\4.0.0.7"
-
 REM 下面分别填入可执行程序的文件名
 set app1_name="CentreSrverD.exe"
 set app2_name="APPD.exe"
