@@ -35,7 +35,7 @@ else:
             if host !="" and user != "" and password != "" and database != "" and port != "":
                 break
         try:
-            db = pymysql.connect(host=host, port=3306, user=user, passwd=password, db=database)
+            db = pymysql.connect(host=host, port=int(port), user=user, passwd=password, db=database)
         except:
             print("连接数据库失败!")
             time.sleep(3)
