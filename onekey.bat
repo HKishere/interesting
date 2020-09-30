@@ -1,47 +1,54 @@
 @echo off
-REM ´Ë½Å±¾¿ÉÒÔÒ»¼üÆô¶¯·şÎñÆ÷\¿Í»§¶Ë\Á÷Ã½Ìå
-REM ÏÂÃæ·Ö±ğÌîÈë³ÌĞòµÄÂ·¾¶
+REM æ­¤è„šæœ¬å¯ä»¥ä¸€é”®å¯åŠ¨æœåŠ¡å™¨\å®¢æˆ·ç«¯\æµåª’ä½“
+REM ä¸‹é¢åˆ†åˆ«å¡«å…¥ç¨‹åºçš„è·¯å¾„
 set bin_path="e:\SVN_XIANAN\XAzysx_BHF3.0\trunk_207\Code(v4.1)\bin"
-set media_path="e:\Èí¼ş\iVMS-4200 Stream Media Server\4.0.0.7"
+set media_path="e:\è½¯ä»¶\iVMS-4200 Stream Media Server\4.0.0.7"
 
-REM ÏÂÃæ·Ö±ğÌîÈë¿ÉÖ´ĞĞ³ÌĞòµÄÎÄ¼şÃû
+REM ä¸‹é¢åˆ†åˆ«å¡«å…¥å¯æ‰§è¡Œç¨‹åºçš„æ–‡ä»¶å
 set app1_name="CentreSrverD.exe"
 set app2_name="APPD.exe"
 set media_name="StreamServerApp.exe"
 
-echo ¿ªÊ¼Ò»¼üÆô¶¯
+echo å¼€å§‹ä¸€é”®å¯åŠ¨
 echo ===============
 
-echo ·şÎñÆ÷Æô¶¯ÁËÂğ?
+:loop1
+
+echo æœåŠ¡å™¨å¯åŠ¨äº†å—?
 tasklist|findstr -i %app1_name%
 if ERRORLEVEL 1 (
-	echo Ã»ÓĞÆô¶¯!
-	echo ÕıÔÚÆô¶¯·şÎñÆ÷...
+	echo æ²¡æœ‰å¯åŠ¨!
+	echo æ­£åœ¨å¯åŠ¨æœåŠ¡å™¨...
 	start "" %bin_path%\%app1_name%
 )
 
-echo ¿Í»§¶ËÆô¶¯ÁËÂğ?
+echo å®¢æˆ·ç«¯å¯åŠ¨äº†å—?
 tasklist|findstr -i %app2_name%
 if ERRORLEVEL 1 (
-	echo Ã»ÓĞÆô¶¯!
-	echo ÕıÔÚÆô¶¯¿Í»§¶Ë...
+	echo æ²¡æœ‰å¯åŠ¨!
+	echo æ­£åœ¨å¯åŠ¨å®¢æˆ·ç«¯...
 	start "" %bin_path%\%app2_name%
 )
 
-echo Á÷Ã½ÌåÆô¶¯ÁËÂğ?
+echo æµåª’ä½“å¯åŠ¨äº†å—?
 tasklist|findstr -i %media_name%
 if ERRORLEVEL 1 (
-	echo Ã»ÓĞÆô¶¯!
-	echo ÕıÔÚÆô¶¯Á÷Ã½Ìå...
+	echo æ²¡æœ‰å¯åŠ¨!
+	echo æ­£åœ¨å¯åŠ¨æµåª’ä½“...
 	start "" %media_path%\%media_name%
 )
 
-echo Æô¶¯Íê±Ï!
+echo å¯åŠ¨å®Œæ¯•!
 echo ==============
-echo ÊäÈëÈÎÒâ¼ü¹Ø±Õ¿Í»§¶ËºÍ·şÎñÆ÷
+echo è¾“å…¥ä»»æ„é”®å…³é—­å®¢æˆ·ç«¯å’ŒæœåŠ¡å™¨
 
 pause
 
 taskkill /f /im %app1_name%
 taskkill /f /im %app2_name%
+
+echo å†æ¬¡è¾“å…¥ä»»æ„é”®å¯åŠ¨!
+pause
+
+goto loop1
 
