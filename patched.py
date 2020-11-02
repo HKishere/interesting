@@ -49,9 +49,14 @@ else:
             for each_line in fp:
                 for each_char in each_line:
                     sql += each_char
-                cursor.execute(sql)
-                sql = ""
+                try:
+                    cursor.execute(sql)
+                except:
+                    print("更新失败,检查SQL语句!")
+                else:
+                    sql = ""
             print("更新成功!")
             db.close()
         fsetting.close()
     fp.close()
+    input("按回车Enter键退出...")
