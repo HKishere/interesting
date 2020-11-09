@@ -53,9 +53,11 @@ else:
                     cursor.execute(sql)
                 except:
                     print("更新失败,检查SQL语句!")
+                    time.sleep(3)
                 else:
                     sql = ""
             print("更新成功!")
+            time.sleep(3)
             db.close()
         fsetting.close()
     fp.close()
