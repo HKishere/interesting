@@ -10,3 +10,6 @@ __pycache__/
 *.ipch
 *.tlog
 *.opendb
+*.ilk
+*.ilk
+*.idb
