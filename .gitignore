@@ -1,4 +1,4 @@
-
+.\interesting\DatabaseUpdate\DatabaseUpdate\Release\
 .vscode/
 *.exe
 *.spec
@@ -13,3 +13,10 @@ __pycache__/
 *.ilk
 *.ilk
 *.idb
+*.db
+*.aps
+*.filters
+*.obj
+*.pch
+*.res
+*.log

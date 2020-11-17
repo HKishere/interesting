@@ -44,7 +44,7 @@ int main() {
 			break;
 		}
 	}
-	if (host.size() > 0 || user.size() > 0 || password.size() > 0 || database.size() > 0 || port.size() > 0)
+	if (host.size() == 0 || user.size() == 0 || password.size() == 0 || database.size() == 0 || port.size() == 0)
 	{
 		cout << "配置信息缺失,检查ini文件" << endl;
 		system("pause");
