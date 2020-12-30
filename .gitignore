@@ -1,4 +1,6 @@
 .\interesting\DatabaseUpdate\DatabaseUpdate\Release\
+.\interesting\DatabaseUpdate\DatabaseUpdate\Debug\
+.\interesting\DatabaseUpdate\Project1\Debug\
 .vscode/
 *.exe
 *.spec
