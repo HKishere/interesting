@@ -56,8 +56,8 @@ else:
                     time.sleep(3)
                 else:
                     sql = ""
-                    print("更新成功!")
-                    time.sleep(3)
+                print("更新成功!")
+                time.sleep(3)
         db.close()
     fsetting.close()
 fp.close()
